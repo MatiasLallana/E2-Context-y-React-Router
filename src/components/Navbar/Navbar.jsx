@@ -10,7 +10,7 @@ export const Navbar = () => {
   return (
     <s.HeaderContainer>
       <s.Logo
-        src="/src/Image/_08c234a2-cf3d-427b-8f8e-4fdde03596bb.jpg"
+        src="/public/Image/_08c234a2-cf3d-427b-8f8e-4fdde03596bb.jpg"
         alt="Logo"
       />
       <s.DeployMenu>
