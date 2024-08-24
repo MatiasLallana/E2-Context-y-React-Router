@@ -4,10 +4,10 @@ export const aboutContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  /* height: 80vh; */
   background-color: #f9f9f2;
   flex-direction: column;
-  background-image: url("https://media.licdn.com/dms/image/C4D12AQHbZlpFTZ0JOQ/article-cover_image-shrink_600_2000/0/1618508672269?e=2147483647&v=beta&t=y7EMJUIBwrwChljEHYQW7f9hTbK0Hj_CqQ_DueQdTHc");
+  /* background-image: url("https://media.licdn.com/dms/image/C4D12AQHbZlpFTZ0JOQ/article-cover_image-shrink_600_2000/0/1618508672269?e=2147483647&v=beta&t=y7EMJUIBwrwChljEHYQW7f9hTbK0Hj_CqQ_DueQdTHc"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

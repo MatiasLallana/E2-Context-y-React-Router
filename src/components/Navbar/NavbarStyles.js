@@ -32,6 +32,10 @@ export const DeployMenu = styled.div`
   }
 `;
 
+export const CartContainer = styled.div`
+  cursor: pointer;
+`;
+
 export const LinksContainer = styled.nav`
   ul {
     display: flex;

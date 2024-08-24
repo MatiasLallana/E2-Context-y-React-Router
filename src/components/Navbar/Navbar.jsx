@@ -5,7 +5,7 @@ import { Context } from "../../Context/Context.jsx";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-  const { menu, handleMenu } = useContext(Context);
+  const { menu, handleMenu, handleCart } = useContext(Context);
 
   return (
     <s.HeaderContainer>
@@ -30,9 +30,15 @@ export const Navbar = () => {
           <li>
             <NavLink to="/contact">Contacto</NavLink>
           </li>
+          <li>
+            <NavLink to="/login">Iniciar Sesión</NavLink>
+          </li>
         </ul>
       </s.LinksContainer>
-      <FaCartShopping size={32} />
+      <s.CartContainer>
+        <FaCartShopping size={32} onClick={handleCart} />
+        <span>{0}</span>
+      </s.CartContainer>
     </s.HeaderContainer>
   );
 };

@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import { Footer } from "../Footer/Footer";
 import { Navbar } from "../Navbar/Navbar";
+import Cart from "../Cart/Cart";
 
 const LayoutContainerStyled = styled.div`
   min-height: 100vh;
@@ -10,10 +11,27 @@ const LayoutContainerStyled = styled.div`
   width: 100%;
   margin: 0 auto;
   background-color: #f9f9f2;
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
 `;
 
 const ContentContainerStyled = styled.div`
-  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #f9f9f2; */
+  min-height: 100vh;
+  height: auto;
+  padding: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  top: 0;
+  /* margin-top: 50px; */
+  margin-bottom: 100px;
 `;
 
 const FooterContainerStyled = styled.div`
@@ -31,6 +49,7 @@ export const Layout = ({ children }) => {
   return (
     <LayoutContainerStyled>
       <Navbar />
+      <Cart />
       <ContentContainerStyled>{children}</ContentContainerStyled>
       <FooterContainerStyled>
         <Footer />
