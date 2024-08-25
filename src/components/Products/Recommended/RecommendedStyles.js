@@ -42,3 +42,11 @@ export const RecommendedCard = styled.div`
     font-size: 1rem;
   }
 `;
+
+export function formatCurrency(amount) {
+  return new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    minimumFractionDigits: 2,
+  }).format(amount);
+}

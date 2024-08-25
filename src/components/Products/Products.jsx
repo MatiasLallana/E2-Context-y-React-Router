@@ -1,19 +1,29 @@
 import * as s from "./ProductsStyles";
-import { products } from "../../Data/data";
+import * as S from "./Recommended/RecommendedStyles";
+
+import { Products } from "../../Data/data";
 import { CardProducts } from "./CardProducts";
 import Filter from "./Filter/Filter";
 import Recommended from "./Recommended/Recommended";
+import { RecommendedProducts } from "../../Data/Recommended";
 
-export const Products = () => {
+export const CardsProducts = () => {
   return (
     <>
-      <Recommended />
+      <S.RecommendedContainer>
+        <S.RecommendedTitle>Los que te recomendamos</S.RecommendedTitle>
+        <S.RecommendedCardContainer>
+          {RecommendedProducts.map((product) => (
+            <Recommended key={product.id} {...product} />
+          ))}
+        </S.RecommendedCardContainer>
+      </S.RecommendedContainer>
       <Filter />
       <s.ProductsContainer>
         <s.TitleSection>Productos destacados</s.TitleSection>
-        {products.map((product) => (
-          <CardProducts key={product.model} {...product} />
-        ))}
+        {Object.entries(Products).map(([, foods]) =>
+          foods.map((food) => <CardProducts key={food.id} {...food} />)
+        )}
       </s.ProductsContainer>
     </>
   );
