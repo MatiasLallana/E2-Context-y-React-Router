@@ -4,7 +4,6 @@ import { formatCurrency } from "./Recommended/RecommendedStyles";
 
 export const CardProducts = (props) => {
   const { img, model, specs, price } = props;
-  console.log(model);
   return (
     <s.ProductCard>
       <s.ProductImage src={img} alt={model} />
