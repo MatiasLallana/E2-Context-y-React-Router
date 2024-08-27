@@ -4,9 +4,11 @@ import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
 import storage from "redux-persist/lib/storage";
 import categoriesReducer from "./categoriesSlices/categoriesSlice";
+import productsSlice from "./productsSlices/productsSlices";
 
 const reducers = combineReducers({
   categories: categoriesReducer,
+  products: productsSlice,
 });
 
 const persisteConfig = {

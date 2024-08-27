@@ -1,10 +1,9 @@
 import * as s from "./FilterStyles";
 
 const Category = (props) => {
-  const { name } = props;
-  console.log(name);
+  const { title } = props;
 
-  return <s.FilterButton>{name}</s.FilterButton>;
+  return <s.FilterButton>{title}</s.FilterButton>;
 };
 
 export default Category;

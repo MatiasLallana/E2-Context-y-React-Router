@@ -1,13 +1,15 @@
 import * as s from "./ProductsStyles";
 import * as S from "./Recommended/RecommendedStyles";
 
-import { Products } from "../../Data/data";
 import { CardProducts } from "./CardProducts";
 import Filter from "./Filter/Filter";
 import Recommended from "./Recommended/Recommended";
 import { RecommendedProducts } from "../../Data/Recommended";
+import { useSelector } from "react-redux";
 
 export const CardsProducts = () => {
+  const products = useSelector((state) => state.products.products);
+
   return (
     <>
       <S.RecommendedContainer>
@@ -21,7 +23,7 @@ export const CardsProducts = () => {
       <Filter />
       <s.ProductsContainer>
         <s.TitleSection>Productos destacados</s.TitleSection>
-        {Object.entries(Products).map(([, foods]) =>
+        {Object.entries(products).map(([, foods]) =>
           foods.map((food) => <CardProducts key={food.id} {...food} />)
         )}
       </s.ProductsContainer>
